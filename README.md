@@ -1,1 +1,33 @@
 # Knowledge Distillation and its Effect on Subgroup Disparities for Disease Prediction
+- This repository contains the code for Individual MSc Project by Jan Marczak @ Imperial College London
+- The report can be viewed under `Thesis' folder
+
+## Dataset
+- The CheXpert imaging dataset together with the patient demographic information used in this work can be downloaded from https://stanfordmlgroup.github.io/competitions/chexpert/.
+
+- The Ham10000 dataset, which contains patient information, can be accessed at https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T.
+
+## Code
+
+For running the code, we recommend setting up a dedicated Python environment.
+
+### Setup Python environment using conda
+
+Create and activate a Python 3 conda environment:
+
+````
+conda create -n distillation python=3
+conda activate distillation
+````
+
+Install PyTorch using conda (for CUDA Toolkit 11.3):
+
+````
+conda install pytorch torchvision cudatoolkit=11.3 -c pytorch
+````
+
+
+### Files
+
+- All feature embeddings and output predictions can be found here (LINK). These can be used to directly reproduce the plots/results by running the notebooks
+- Due to the extensive sizes, the models have not been saved but can be re-trained using config files. We provide 2 main low capacity teachers under `teachers' folder
