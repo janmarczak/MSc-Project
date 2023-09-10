@@ -7,6 +7,10 @@
 
 - The Ham10000 dataset, which contains patient information, can be accessed at https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T.
 
+### Data Splits
+- Our training splits (csv files) for all original/fair/unfair data compositions are present under `framework/data' folder.
+  
+
 ## Code
 
 For running the code, we recommend setting up a dedicated Python environment.
