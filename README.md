@@ -30,8 +30,7 @@ Install PyTorch using conda (for CUDA Toolkit 11.3):
 conda install pytorch torchvision cudatoolkit=11.3 -c pytorch
 ````
 
-
 ### Files
 
-- All feature embeddings and output predictions can be found here (LINK). These can be used to directly reproduce the plots/results by running the notebooks
-- Due to the extensive sizes, the models have not been saved but can be re-trained using config files. We provide 2 main low capacity teachers under `teachers' folder
+- All feature embeddings and output predictions can be found here [here](). These can be used to directly reproduce the plots/results by running the notebooks
+- Due to the extensive sizes, the models have not been saved but can be re-trained using config files. We provide 2 main low capacity teachers under `teachers' folder. To download the high capacity ResNet101 models click [here]([https://www.google.com](https://drive.google.com/drive/folders/10cqT0hQcW6s-nVRoI6XSZk5Iarx1urYl?usp=sharing)https://drive.google.com/drive/folders/10cqT0hQcW6s-nVRoI6XSZk5Iarx1urYl?usp=sharing)
