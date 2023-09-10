@@ -1,0 +1,36 @@
+data_names: 
+  - 'chexpert'
+
+sensitive_attributes:
+  - 'Age'
+  - 'Sex'
+  - 'Race'
+
+random_seeds:
+  - 42
+  - 43
+  - 44
+  - 45
+  - 46
+
+model_names:
+  - 'resnet18'
+  - 'resnet34'
+  - 'resnet50'
+  - 'resnet101'
+
+sampling_techniques:
+  - 'RANDOM_WEIGHTED_SAMPLING'
+
+fairness_constraints:
+  - 'EQUAL_LOSS'
+
+lagrangians:
+  - 5.0
+
+epsilons:
+  - 0.1
+
+gpu: 0
+
+save_path: "../results/chexpert/fair_loss/"

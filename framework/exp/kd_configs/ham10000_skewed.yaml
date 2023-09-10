@@ -1,0 +1,45 @@
+  ## TEACHER: 
+    # - r34-sam1-s46 (Good Capacity)
+    # - r101-sam1-s42 (Too high Capacity)
+
+  ## HAM10k NO FEMALE
+    # STUDENTS:
+    # - r18-sam1-s43
+    # - r18-sam1-s46
+    # - r34-sam1-s42
+    # - r34-sam1-s43
+
+experiment_name: kd
+
+data_names: 
+  - ham10000_no_female
+  - ham10000_no_old
+
+sensitive_attributes:
+  - Age
+  - Sex
+
+student_models:
+  - resnet18
+  - resnet34
+
+teacher_models:
+  - name: resnet34
+    id: r34-sam1-s46
+  - name: resnet101
+    id: r101-sam1-s42
+
+random_seeds:
+  - 42
+  - 43
+  - 44
+  - 45
+  - 46
+
+sampling_techniques:
+  - RANDOM_WEIGHTED_SAMPLING
+
+teacher_dir_path: "../teachers/ham10000/"
+save_path: "../results/ham10000_no_female/kd/"
+skewed_data: true
+gpu: 0

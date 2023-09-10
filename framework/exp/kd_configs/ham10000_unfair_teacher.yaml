@@ -1,0 +1,29 @@
+# Unfair Teacher Fair Students Ham10k
+
+experiment_name: kd
+
+data_names: 
+  - ham10000_equal_upsample
+
+sensitive_attributes:
+  - Age
+  - Sex
+
+student_models:
+  - resnet18
+  - resnet34
+
+teacher_models:
+  - name: resnet34
+    id: r34-sam1-s42
+
+random_seeds:
+  - 45
+  - 46
+
+sampling_techniques:
+  - RANDOM_WEIGHTED_SAMPLING
+
+teacher_dir_path: "../teachers/ham10000_no_old/"
+skewed_data: False
+gpu: 0

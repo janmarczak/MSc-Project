@@ -1,0 +1,21 @@
+data_names: 
+  - 'fitzpatrick17k'
+
+sensitive_attributes:
+  - 'SkinType'
+
+random_seeds:
+  - 42
+  - 43
+  - 44
+
+sampling_techniques:
+  - 'NO_SAMPLING'
+  - 'RANDOM_WEIGHTED_SAMPLING'
+  - 'SUBGROUP_SAMPLING'
+
+model_names:
+  - 'resnet18'
+  - 'resnet34'
+  - 'resnet50'
+  - 'resnet101'

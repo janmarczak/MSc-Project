@@ -1,0 +1,178 @@
+num_workers: 16
+data_name: 'chexpert'
+sensitive_attributes:
+  - 'Age'
+  - 'Sex'
+  - 'Race'
+
+models:
+# Teachers
+  - name: 'resnet34'
+    id: 'r34-sam1-s43'
+    random_seed: 43
+    path: '../results/chexpert/resnet/'
+  - name: 'resnet101'
+    id: 'r101-sam1-s46'
+    random_seed: 46
+    path: '../results/chexpert/resnet/'
+
+# NO FEMALE STUDENTS W/ AND W/O KD
+  - name: 'resnet18'
+    id: 'r18-sam1-s46'
+    random_seed: 46
+    path: '../results/chexpert_no_female/resnet/'
+  - name: 'resnet18'
+    id: 'r18-sam1-s44'
+    random_seed: 44
+    path: '../results/chexpert_no_female/resnet/'
+  - name: 'resnet34'
+    id: 'r34-sam1-s46'
+    random_seed: 46
+    path: '../results/chexpert_no_female/resnet/'
+  - name: 'resnet34'
+    id: 'r34-sam1-s45'
+    random_seed: 45
+    path: '../results/chexpert_no_female/resnet/'
+  - name: 'resnet18'
+    id: 'r18-sam1-kd1-s46_r34-sam1-s43'
+    random_seed: 46
+    path: '../results/chexpert_no_female/kd/'
+  - name: 'resnet18'
+    id: 'r18-sam1-kd1-s44_r34-sam1-s43'
+    random_seed: 44
+    path: '../results/chexpert_no_female/kd/'
+  - name: 'resnet34'
+    id: 'r34-sam1-kd1-s46_r34-sam1-s43'
+    random_seed: 46
+    path: '../results/chexpert_no_female/kd/'
+  - name: 'resnet34'
+    id: 'r34-sam1-kd1-s45_r34-sam1-s43'
+    random_seed: 45
+    path: '../results/chexpert_no_female/kd/'
+  - name: 'resnet18'
+    id: 'r18-sam1-kd1-s46_r101-sam1-s46'
+    random_seed: 46
+    path: '../results/chexpert_no_female/kd/'
+  - name: 'resnet18'
+    id: 'r18-sam1-kd1-s44_r101-sam1-s46'
+    random_seed: 44
+    path: '../results/chexpert_no_female/kd/'
+  - name: 'resnet34'
+    id: 'r34-sam1-kd1-s46_r101-sam1-s46'
+    random_seed: 46
+    path: '../results/chexpert_no_female/kd/'
+  - name: 'resnet34'
+    id: 'r34-sam1-kd1-s45_r101-sam1-s46'
+    random_seed: 45
+    path: '../results/chexpert_no_female/kd/'
+
+  # NO OLD STUDENTS W/ AND W/O KD
+  - name: 'resnet18'
+    id: 'r18-sam1-s46'
+    random_seed: 46
+    path: '../results/chexpert_no_old/resnet/'
+  - name: 'resnet18'
+    id: 'r18-sam1-s42'
+    random_seed: 42
+    path: '../results/chexpert_no_old/resnet/'
+  - name: 'resnet34'
+    id: 'r34-sam1-s42'
+    random_seed: 42
+    path: '../results/chexpert_no_old/resnet/'
+  - name: 'resnet34'
+    id: 'r34-sam1-s45'
+    random_seed: 45
+    path: '../results/chexpert_no_old/resnet/'
+  - name: 'resnet18'
+    id: 'r18-sam1-kd1-s46_r34-sam1-s43'
+    random_seed: 46
+    path: '../results/chexpert_no_old/kd/'
+  - name: 'resnet18'
+    id: 'r18-sam1-kd1-s42_r34-sam1-s43'
+    random_seed: 42
+    path: '../results/chexpert_no_old/kd/'
+  - name: 'resnet34'
+    id: 'r34-sam1-kd1-s42_r34-sam1-s43'
+    random_seed: 42
+    path: '../results/chexpert_no_old/kd/'
+  - name: 'resnet34'
+    id: 'r34-sam1-kd1-s45_r34-sam1-s43'
+    random_seed: 45
+    path: '../results/chexpert_no_old/kd/'
+  - name: 'resnet18'
+    id: 'r18-sam1-kd1-s46_r101-sam1-s46'
+    random_seed: 46
+    path: '../results/chexpert_no_old/kd/'
+  - name: 'resnet18'
+    id: 'r18-sam1-kd1-s42_r101-sam1-s46'
+    random_seed: 42
+    path: '../results/chexpert_no_old/kd/'
+  - name: 'resnet34'
+    id: 'r34-sam1-kd1-s42_r101-sam1-s46'
+    random_seed: 42
+    path: '../results/chexpert_no_old/kd/'
+  - name: 'resnet34'
+    id: 'r34-sam1-kd1-s45_r101-sam1-s46'
+    random_seed: 45
+    path: '../results/chexpert_no_old/kd/'
+
+# NO WHITE STUDENT W/ AND W/O KD
+- name: 'resnet18'
+  id: 'r18-sam1-s46'
+  random_seed: 46
+  path: '../results/chexpert_no_white/resnet/'
+- name: 'resnet18'
+  id: 'r18-sam1-s42'
+  random_seed: 42
+  path: '../results/chexpert_no_white/resnet/'
+- name: 'resnet34'
+  id: 'r34-sam1-s44'
+  random_seed: 44
+  path: '../results/chexpert_no_white/resnet/'
+- name: 'resnet34'
+  id: 'r34-sam1-s46'
+  random_seed: 46
+  path: '../results/chexpert_no_white/resnet/'
+- name: 'resnet18'
+  id: 'r18-sam1-kd1-s46_r34-sam1-s43'
+  random_seed: 46
+  path: '../results/chexpert_no_white/kd/'
+- name: 'resnet18'
+  id: 'r18-sam1-kd1-s42_r34-sam1-s43'
+  random_seed: 42
+  path: '../results/chexpert_no_white/kd/'
+- name: 'resnet34'
+  id: 'r34-sam1-kd1-s44_r34-sam1-s43'
+  random_seed: 44
+  path: '../results/chexpert_no_white/kd/'
+- name: 'resnet34'
+  id: 'r34-sam1-kd1-s46_r34-sam1-s43'
+  random_seed: 46
+  path: '../results/chexpert_no_white/kd/'
+- name: 'resnet18'
+  id: 'r18-sam1-kd1-s46_r101-sam1-s46'
+  random_seed: 46
+  path: '../results/chexpert_no_white/kd/'
+- name: 'resnet18'
+  id: 'r18-sam1-kd1-s42_r101-sam1-s46'
+  random_seed: 42
+  path: '../results/chexpert_no_white/kd/'
+- name: 'resnet34'
+  id: 'r34-sam1-kd1-s44_r101-sam1-s46'
+  random_seed: 44
+  path: '../results/chexpert_no_white/kd/'
+- name: 'resnet34'
+  id: 'r34-sam1-kd1-s46_r101-sam1-s46'
+  random_seed: 46
+  path: '../results/chexpert_no_white/kd/'
+
+
+# Additional
+- name: 'resnet34'
+  id: 'r34-sam1-s45'
+  random_seed: 45
+  path: '../results/chexpert_no_white/resnet/'
+- name: 'resnet34'
+  id: 'r34-sam1-kd1-s45_r34-sam1-s43'
+  random_seed: 45
+  path: '../results/chexpert_no_white/kd/'

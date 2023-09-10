@@ -1,0 +1,43 @@
+
+experiment_name: attention_kd
+
+data_names: 
+  - chexpert_no_female
+  - chexpert_no_old
+  - chexpert_no_white
+
+sensitive_attributes:
+  - Age
+  - Sex
+  - Race
+
+student_models:
+  - resnet18
+  - resnet34
+
+teacher_models:
+  # - name: resnet34
+  #   id: r34-sam1-s43
+  - name: resnet101
+    id: r101-sam1-s46
+
+random_seeds:
+  - 42
+  - 43
+  - 44
+  - 45
+  - 46
+
+sampling_techniques:
+  - RANDOM_WEIGHTED_SAMPLING
+
+distillation_technique: ATTENTION
+feature_maps_at: 
+  - false
+  - true
+  - false
+  - true
+
+teacher_dir_path: "../teachers/chexpert/"
+skewed_data: true
+gpu: 1

@@ -1,0 +1,30 @@
+# Unfair Teacher Fair Students Ham10k
+
+experiment_name: kd
+
+data_names: 
+  - chexpert_equal
+
+sensitive_attributes:
+  - Age
+  - Sex
+  - Race
+
+student_models:
+  - resnet50
+  - resnet101
+
+teacher_models:
+  - name: resnet101
+    id: r101-sam1-s46
+
+random_seeds:
+  - 43
+  - 46
+
+sampling_techniques:
+  - RANDOM_WEIGHTED_SAMPLING
+
+teacher_dir_path: "../teachers/chexpert_no_old/"
+skewed_data: False
+gpu: 1

@@ -1,0 +1,51 @@
+data_name: 'chexpert'
+
+teachers: 
+  - name: 'resnet34'
+    id: 'r34-sam1-s43'
+    random_seed: 43
+    path: '../results/chexpert/resnet/'
+  - name: 'resnet101'
+    id: 'r101-sam1-s46'
+    random_seed: 46
+    path: '../results/chexpert/resnet/'
+
+students:
+  - chexpert_no_female:
+    - models:
+      - name: 'resnet18'
+        random_seeds: 
+          - 44
+          - 46 
+      - name: 'resnet34'
+        random_seeds: 
+          - 45
+          - 46
+    - path: '../results/chexpert_no_female/resnet/'
+    - kd_path: '../results/chexpert_no_female/kd/'
+
+  - chexpert_no_old:
+    - models:
+      - name: 'resnet18'
+        random_seeds: 
+          - 42
+          - 46 
+      - name: 'resnet34'
+        random_seeds: 
+          - 42
+          - 45
+    - path: '../results/chexpert_no_old/resnet/'
+    - kd_path: '../results/chexpert_no_old/kd/'
+
+  - chexpert_no_white:
+    - models:
+      - name: 'resnet18'
+        random_seeds: 
+          - 42
+          - 46 
+      - name: 'resnet34'
+        random_seeds: 
+          - 44
+          - 46
+    - path: '../results/chexpert_no_white/resnet/'
+    - kd_path: '../results/chexpert_no_white/kd/'

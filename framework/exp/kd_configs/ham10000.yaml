@@ -1,0 +1,33 @@
+
+experiment_name: kd
+
+data_names: 
+  - ham10000
+
+sensitive_attributes:
+  - Age
+  - Sex
+
+student_models:
+  # - resnet18
+  - resnet34
+
+teacher_models:
+  - name: resnet50
+    id: r50-sam1-s44
+
+random_seeds:
+  - 42
+  - 43
+  - 44
+  - 45
+  - 46
+
+sampling_techniques:
+  - RANDOM_WEIGHTED_SAMPLING
+
+
+teacher_dir_path: "../teachers/ham10000/"
+save_path: "../results/ham10000/kd/vanilla/"
+skewed_data: false
+gpu: 1

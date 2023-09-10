@@ -1,0 +1,39 @@
+experiment_name: kd-feature
+
+data_names: 
+  - ham10000_no_female
+  - ham10000_no_old
+
+sensitive_attributes:
+  - Age
+  - Sex
+
+student_models:
+  - resnet18
+  - resnet34
+
+teacher_models:
+  - name: resnet34
+    id: r34-sam1-s46
+
+random_seeds:
+  - 42
+  - 43
+  - 44
+  - 45
+  - 46
+
+sampling_techniques:
+  - RANDOM_WEIGHTED_SAMPLING
+
+distillation_technique: FEATURE
+feature_maps_at: 
+  - true
+  - true
+  - true
+  - true
+
+teacher_dir_path: "../teachers/ham10000/"
+skewed_data: true
+gpu: 0
+num_workers: 16

@@ -1,0 +1,31 @@
+data_names: 
+  - ham10000
+sensitive_attributes:
+  - Age
+  - Sex
+student_models:
+  - resnet34
+teacher_models:
+  - name: resnet50
+    id: r50-sam1-s44
+sampling_techniques:
+  - RANDOM_WEIGHTED_SAMPLING
+  - NO_SAMPLING
+random_seeds:
+  - 42
+  - 43
+alphas:
+  - 0.1
+  - 0.2
+  - 0.3
+  - 0.4
+  - 0.5
+temperatures:
+  - 1
+  - 3
+  - 5
+  - 8
+  - 10
+num_workers: 8
+teacher_dir_path: "../results/ham10000/models/good_teachers/"
+save_path: "../results/ham10000/kd/alpha-temp/"

@@ -1,0 +1,26 @@
+data_name: ham10000
+sensitive_attributes: 
+  - Age
+  - Sex
+student_models: 
+  - resnet18
+  - resnet34
+teacher_models: 
+  - name: resnet50
+    id: r50-sam1-s44
+  - name: resnet101
+    id: r101-sam1-s43
+  - name: resnet101
+    id: r101-sam0-s43
+  - name: resnet101
+    id: r101-sam2-s43
+random_seeds: 
+  - 42
+  - 43
+  - 44
+sampling_techniques: 
+  - NO_SAMPLING
+  - RANDOM_WEIGHTED_SAMPLING
+  - SUBGROUP_SAMPLING
+teacher_dir_path: "../results/ham10000/models/good_teachers/"
+save_path: "../tmp"

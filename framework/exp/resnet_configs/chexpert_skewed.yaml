@@ -1,0 +1,34 @@
+data_names: 
+  - 'chexpert_no_female'
+  - 'chexpert_no_male'
+  - 'chexpert_no_young'
+  - 'chexpert_no_old'
+  - 'chexpert_no_white'
+  - 'chexoert_no_non_white'
+  - 'chexpert_equal'
+  - 'chexpert_upsample'
+  
+sensitive_attributes:
+  - 'Age'
+  - 'Sex'
+  - 'Race'
+
+random_seeds:
+  - 42
+  - 43
+  - 44
+  - 45
+  - 46
+
+sampling_techniques:
+  - 'RANDOM_WEIGHTED_SAMPLING'
+
+model_names:
+  - 'resnet18'
+  - 'resnet34'
+  - 'resnet50'
+  - 'resnet101'
+
+skewed_data: true
+
+gpu: 0

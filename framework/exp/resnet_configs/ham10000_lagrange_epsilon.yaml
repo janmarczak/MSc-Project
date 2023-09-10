@@ -1,0 +1,39 @@
+data_names: 
+  - 'ham10000'
+
+sensitive_attributes:
+  - 'Age'
+  - 'Sex'
+
+random_seeds:
+  - 42
+  - 43
+
+model_names:
+  - 'resnet50'
+
+sampling_techniques:
+  - 'RANDOM_WEIGHTED_SAMPLING'
+
+fairness_constraints:
+  - 'EQUAL_LOSS'
+  - 'EQUALIZED_ODDS'
+
+lagrangians:
+  - 0.5
+  - 1.0
+  - 5.0
+  - 10.0
+  - 50.0
+  - 100.0
+
+epsilons:
+  - 0.01
+  - 0.02
+  - 0.05
+  - 0.1
+  - 0.2
+
+gpu: 0
+
+save_path: "../results/ham10000/resnet/lagrange_epsilon/"

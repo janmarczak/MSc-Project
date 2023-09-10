@@ -1,0 +1,26 @@
+data_names: 
+  - 'ham10000'
+
+sensitive_attributes:
+  - 'Age'
+  - 'Sex'
+
+random_seeds:
+  - 42
+  - 43
+  - 44
+  - 45
+  - 46
+
+sampling_techniques:
+  - 'NO_SAMPLING'
+  - 'RANDOM_WEIGHTED_SAMPLING'
+  - 'SUBGROUP_SAMPLING'
+  
+model_names:
+  - 'resnet18'
+  - 'resnet34'
+  - 'resnet50'
+  - 'resnet101'
+
+gpu: 1

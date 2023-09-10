@@ -1,0 +1,33 @@
+data_names: 
+  - 'ham10000_no_female'
+  - 'ham10000_no_male'
+  - 'ham10000_no_young'
+  - 'ham10000_no_old'
+  - 'ham10000_equal'
+  - 'ham10000_equal_upsample'
+  - 'ham10000_equal_upsample_2'
+  - 'ham10000_upsample'
+  
+sensitive_attributes:
+  - 'Age'
+  - 'Sex'
+
+random_seeds:
+  - 42
+  - 43
+  - 44
+  - 45
+  - 46
+
+sampling_techniques:
+  - 'RANDOM_WEIGHTED_SAMPLING'
+
+model_names:
+  - 'resnet18'
+  - 'resnet34'
+  - 'resnet50'
+  - 'resnet101'
+
+skewed_data: true
+
+gpu: 0

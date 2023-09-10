@@ -1,0 +1,39 @@
+
+experiment_name: preliminary
+
+data_names: 
+  - ham10000
+
+sensitive_attributes:
+  - Age
+  - Sex
+
+student_models:
+  # - resnet18
+  - resnet34
+
+teacher_models:
+  - name: resnet50
+    id: r50-sam1-s44
+
+random_seeds:
+  - 42
+  - 43
+  - 44
+  - 45
+  - 46
+
+sampling_techniques:
+  - RANDOM_WEIGHTED_SAMPLING
+
+distillation_technique: FEATURE
+feature_maps_at: 
+  - true
+  - true
+  - true
+  - true
+
+teacher_dir_path: "../results/ham10000/models/good_teachers/"
+save_path: "../results/ham10000/kd/feature/equal_mse_ce/"
+skewed_data: false
+gpu: 1

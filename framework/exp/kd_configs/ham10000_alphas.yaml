@@ -1,0 +1,42 @@
+
+# Testing different alpha values for the knowledge distillation loss with one resnet18 student for seed 46
+
+data_names: 
+  - ham10000_no_female
+  - ham10000_no_old
+
+sensitive_attributes:
+  - Age
+  - Sex
+
+student_models:
+  - resnet18
+
+teacher_models:
+  - name: resnet34
+    id: r34-sam1-s46
+
+sampling_techniques:
+  - RANDOM_WEIGHTED_SAMPLING
+  
+random_seeds:
+  - 43
+
+experiment_name: "alphas"
+
+alphas:
+  - 0.1
+  - 0.2
+  - 0.3
+  - 0.4
+  - 0.5
+  - 0.6
+  - 0.7
+  - 0.8
+  - 0.9
+  - 1.0
+
+num_workers: 8
+teacher_dir_path: "../teachers/ham10000/"
+skewed_data: true
+gpu: 1

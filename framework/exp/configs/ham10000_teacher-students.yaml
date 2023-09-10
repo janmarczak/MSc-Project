@@ -1,0 +1,36 @@
+data_name: 'ham10000'
+
+teachers: 
+  - name: 'resnet34'
+    random_seed: 46
+    path: '../results/ham10000/resnet/original/'
+  - name: 'resnet101'
+    random_seed: 42
+    path: '../results/ham10000/resnet/original/'
+
+students:
+  - ham10000_no_female:
+    - models:
+      - name: 'resnet18'
+        random_seeds: 
+          - 43
+          - 46 
+      - name: 'resnet34'
+        random_seeds: 
+          - 42
+          - 43
+    - path: '../results/ham10000_no_female/resnet/'
+    - kd_path: '../results/ham10000_no_female/kd/'
+
+  - ham10000_no_old:
+    - models:
+      - name: 'resnet18'
+        random_seeds: 
+          - 43
+          - 46 
+      - name: 'resnet34'
+        random_seeds: 
+          - 42
+          - 43
+    - path: '../results/ham10000_no_old/resnet/'
+    - kd_path: '../results/ham10000_no_old/kd/'
