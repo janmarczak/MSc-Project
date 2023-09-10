@@ -32,5 +32,5 @@ conda install pytorch torchvision cudatoolkit=11.3 -c pytorch
 
 ### Results
 - We provide all output predictions in 'results' folder. They can be used to reproduce performance plots
-- Output predictions alongisde feature embeddings can be found here [here](). These can be used to directly reproduce the plots/results by running the notebooks
+- To see feature embeddings please contact me directly as they were too big to upload online
 - Due to the extensive sizes, the models have not been saved but can be re-trained using config files. We provide 2 main low capacity teachers under 'teachers' folder. To download the high capacity ResNet101 models click [here](https://www.google.com](https://drive.google.com/drive/folders/10cqT0hQcW6s-nVRoI6XSZk5Iarx1urYl?usp=sharing)https://drive.google.com/drive/folders/10cqT0hQcW6s-nVRoI6XSZk5Iarx1urYl?usp=sharing)
