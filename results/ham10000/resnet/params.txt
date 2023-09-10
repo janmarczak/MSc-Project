@@ -1,0 +1,53 @@
+ResNet Experiments 
+
+    Models:
+        - ResNet18
+        - ResNet34
+        - ResNet50
+        - ResNet101
+
+    Hyperparameters for all experiments
+        - ReduceLROnPlateu learning scheduler
+        - lr=0.0001
+        - batch_size=64,
+        - max_epochs=50
+        - patience=8
+        - scheduler_patience=3
+        - Random Seeds = [42, 43, 44]
+    
+    Experiments:
+
+        1. ResNets Fine Tuning:
+            - save_path = '../resnet_training/ft/', 
+            - pretrained = True,
+            - sample_data = False
+            - load_model_on_lr_change = False
+
+        2. ResNets Fine Tuning + Loading:
+            - save_path = '../resnet_training/ft_load/', 
+            - pretrained = True,
+            - sample_data = False
+            - load_model_on_lr_change = True
+
+        3. ResNets Fine Tuning + Sampling
+            - save_path = '../resnet_training/ft_sampling/', 
+            - pretrained_student = True
+            - sample_data = True
+            - load_model_on_lr_change = False
+
+        4. ResNets Fine Tuning + Sampling + Loading
+            - save_path = '../resnet_training/ft_sampling_load/', 
+            - pretrained_student = True
+            - sample_data = True
+            - load_model_on_lr_change = True
+
+        5. ResNets Training
+            - save_path = '../resnet_training/train/', 
+            - pretrained_student = False
+            - sample_data = False
+            - load_model_on_lr_change = False
+        
+
+
+
+

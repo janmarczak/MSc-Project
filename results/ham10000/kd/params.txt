@@ -1,0 +1,46 @@
+Knowledge Distillation Experiments 
+
+    Teacher Models: 
+        - Taken from resnet_training
+        - Resnet101 from resnet_ft_sampling_load on seed 43
+        - Resnet101 from resnet_ft_load on seed 43
+        - ResNet50 from resnet_ft_sampling_load on seed 44
+
+    Student Models:
+        - Resnet18
+        - Resnet34
+
+    Hyperparameters for all experiments:
+        - learning scheduler with loading technique
+        - pre-traiend teacher models
+        - lr=0.0001 and ReduceLROnPlateu by 0.1
+        - batch_size=64,
+        - max_epochs=50
+        - patience=8
+        - scheduler_patience=3
+        - temperature=10
+        - alpha=0.1
+        - Random Seed=42
+
+    
+    Experiments:
+            
+        1. KD with fine tuning:
+            - save_path = '../kd/ft/', 
+            - pretrained_student = True
+            - sample_data = False
+
+        2. KD with fine tuning & sampling:
+            - save_path = '../kd/ft_sampling/', 
+            - pretrained_student = True
+            - sample_data = True
+
+        3. KD with training:
+            - save_path = '../kd/train/', 
+            - pretrained_student = False
+            - sample_data = False
+        
+
+
+
+
