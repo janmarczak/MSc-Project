@@ -1,0 +1,5 @@
+pca_mode,label_hypoth,sex_hypoth,age_hypoth,race_hypoth,label_pv,sex_pv,age_pv,race_pv
+PCA Mode 1,True,True,True,False,0.0,3.2e-09,0.0,0.1060275463
+PCA Mode 2,True,True,True,True,0.0,0.0,6e-10,5.9e-09
+PCA Mode 3,True,True,True,True,0.0,0.0,0.0,1.21e-08
+PCA Mode 4,True,True,True,False,0.0001560545,1.14e-08,9.3e-09,0.9822962683

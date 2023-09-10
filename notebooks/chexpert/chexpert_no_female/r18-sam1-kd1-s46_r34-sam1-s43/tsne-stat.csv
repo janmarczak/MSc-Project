@@ -1,0 +1,3 @@
+tsne_dim,label_hypoth,sex_hypoth,age_hypoth,race_hypoth,label_pv,sex_pv,age_pv,race_pv
+T-SNE 1,True,True,True,True,0.0,0.0,0.0,3.5e-05
+T-SNE 2,True,False,True,False,0.0,0.090962,0.034334,0.294187
