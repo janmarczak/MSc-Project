@@ -20,7 +20,7 @@ For running the code, we recommend setting up a dedicated Python environment.
 Create and activate a Python 3 conda environment:
 
 ````
-conda create -n distillation python=3
+conda create -n distillation python=3 --file requirements.txt
 conda activate distillation
 ````
 
